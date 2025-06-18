@@ -8,5 +8,16 @@ metadata:
 spec:
   containers:
   - name: worker-app
-    image: kodekloud/examplevotingapp_worker:v1
+    image: docker/example-voting-app-worker
+    env:
+    - name: DB_HOST
+      value: "db"
+    - name: DB_PORT
+      value: "5432"
+    - name: DB_USER
+      value: "postgres"
+    - name: DB_PASSWORD
+      value: "postgres"
+    - name: DB_NAME
+      value: "postgres"
 
